@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ReactRouterDOM from 'react-router-dom';
-const { HashRouter, Link, NavLink, Route, Switch } = ReactRouterDOM;
+
+import { HashRouter, Route} from 'react-router-dom';
 
 
-import App from './App.js';
+
 import People from './People.js';
 import Places from './Places.js';
 import Things from './Things.js';
