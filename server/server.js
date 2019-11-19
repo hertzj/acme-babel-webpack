@@ -1,21 +1,18 @@
 const express = require('express');
 const path = require('path');
-const db = require('./db.js')
+const db = require('./db.js');
 const PORT = 3000;
-const babel = require('@babel/core');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../static')));
 // app.use(express.static(path.join(__dirname, '../static/index.html')));
 
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', 'static/index.html'));
-    
+  res.sendFile(path.join(__dirname, '..', 'static/index.html'));
 });
 
-app.listen(PORT, () => console.log('listening'))
-
+app.listen(PORT, () => console.log('listening'));
 
 // app.get('/api/people', (req, res, next) => {
 //     Person.findAll()

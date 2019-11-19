@@ -1,6 +1,7 @@
 {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
+  "presets": [
+    // preset-env is defaulting to es6, in order to user es7 async/await we need to tell it we want all the features that the current version (the version you are running on your machine) of node has.
+    ["@babel/preset-env", { "targets": { "node": "current" } }],
+    "@babel/preset-react"
+  ]
 }
